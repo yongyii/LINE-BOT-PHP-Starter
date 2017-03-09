@@ -22,7 +22,6 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text."แล้ว คุณข้าวโอ๊ต"	
 			];
-			}
 			echo "OK1";
 			
 			$url1 = 'http://blynk-cloud.com/880cdfcd44334a9d863471fd62d8c71b/update/'; 
@@ -40,6 +39,8 @@ if (!is_null($events['events'])) {
     			$content = curl_exec( $ch );
     			curl_close($ch);
     			print_r($content);
+			}
+			
 			
 			else if($text == 'เปิดไฟ2'){
 			// Get replyToken
