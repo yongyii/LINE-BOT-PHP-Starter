@@ -21,16 +21,28 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				'text' => $text."แล้ว"
+				echo "OK1";
 			];
 			}
 			
+			else if($text == 'เปิดไฟ2'){
+			// Get replyToken
+			$replyToken = $event['replyToken'];
+
+			// Build message to reply back
+			$messages = [
+				'type' => 'text',
+				'text' => $text."แล้ว"
+				echo "OK2";
+			];
+			}
 			
 			else {
 				$replyToken = $event['replyToken'];
 				
 				$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $text."คำสั่งไม่ถูก"
 			];
 			}
 
@@ -56,4 +68,3 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OK";
