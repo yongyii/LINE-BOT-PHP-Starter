@@ -13,13 +13,19 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
+			if($text == 'เปิดไฟ1'){
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text."ยังไม่พร้อม"
+				'text' => $text."แล้ว"
+			];
+			}
+			else $messages = [
+				'type' => 'text',
+				'text' => $text
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
