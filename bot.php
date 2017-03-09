@@ -14,6 +14,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			if($text == 'เปิดไฟ1'){
+				echo "OK1";
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
@@ -22,23 +23,7 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => $text."แล้ว คุณข้าวโอ๊ต"	
 			];
-			echo "OK1";
 			
-			$url1 = 'http://blynk-cloud.com/880cdfcd44334a9d863471fd62d8c71b/update/'; 
-  
-  			$data1 = 'V0?value=1';
-			// 1. initialize
-			$ch = curl_init();
- 
-			// 2. set the options, including the url
-			curl_setopt($ch, CURLOPT_URL, $url1);
-			curl_setopt( $ch, CURLOPT_POSTFIELDS, $data1 );
-    			curl_setopt( $ch, CURLOPT_POST, true );
-    			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
-    			curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
-    			$content = curl_exec( $ch );
-    			curl_close($ch);
-    			print_r($content);
 			}
 			
 			
