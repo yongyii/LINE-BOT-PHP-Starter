@@ -20,9 +20,9 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text."แล้ว"
-				echo "OK1";
+				'text' => $text."แล้ว"	
 			];
+			echo "OK1";
 			}
 			
 			else if($text == 'เปิดไฟ2'){
@@ -33,8 +33,8 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				'text' => $text."แล้ว"
-				echo "OK2";
 			];
+			echo "OK2";
 			}
 			
 			else {
